@@ -14,6 +14,10 @@ RUN mkdir -p /mlflow/ \
     psycopg2 \
     mysql
 
+RUN mkdir -p /mlflow/store
+RUN mkdir -p /mlflow/mlflow-artifacts
+RUN chmod 777 -R /mlflow/
+
 EXPOSE 5000
 
 ENV BACKEND_URI /mlflow/store
