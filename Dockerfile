@@ -11,7 +11,6 @@ RUN mkdir -p /mlflow/ \
     sqlalchemy \
     boto3 \
     google-cloud-storage \
-    psycopg2 \
     mysql 
 
 RUN mkdir -p /mlflow/store
