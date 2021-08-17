@@ -9,8 +9,7 @@ RUN mkdir -p /mlflow/ \
     mlflow==$MLFLOW_VERSION \
     sqlalchemy \
     boto3 \
-    google-cloud-storage \
-    mysql 
+    google-cloud-storage
 
 RUN mkdir -p /mlflow/store
 RUN mkdir -p /mlflow/mlflow-artifacts
