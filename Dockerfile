@@ -12,7 +12,9 @@ RUN mkdir -p /mlflow/ \
     boto3 \
     google-cloud-storage \
     psycopg2 \
-    mysql
+    mysql \
+    jupyter \
+    notebook \
 
 RUN mkdir -p /mlflow/store
 RUN mkdir -p /mlflow/mlflow-artifacts
@@ -23,6 +25,7 @@ EXPOSE 5000
 ENV BACKEND_URI /mlflow/store
 ENV ARTIFACT_ROOT /mlflow/mlflow-artifacts
 CMD echo "Artifact Root is ${ARTIFACT_ROOT}" && \
+  jupyter notebook \
   mlflow server \
   --backend-store-uri ${BACKEND_URI} \
   --default-artifact-root ${ARTIFACT_ROOT} \
