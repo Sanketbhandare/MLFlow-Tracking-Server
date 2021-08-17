@@ -14,7 +14,7 @@ RUN mkdir -p /mlflow/ \
     psycopg2 \
     mysql \
     jupyter \
-    notebook \
+    notebook
 
 RUN mkdir -p /mlflow/store
 RUN mkdir -p /mlflow/mlflow-artifacts
