@@ -5,9 +5,7 @@ WORKDIR /mlflow/
 
 ARG MLFLOW_VERSION=1.19.0
 RUN mkdir -p /mlflow/ \
-  && yum install default-libmysqlclient-dev libpq-dev build-essential -y \
-  && pip install \
-    mlflow==$MLFLOW_VERSION \
+  && pip install mlflow==$MLFLOW_VERSION \
     sqlalchemy \
     boto3 \
     google-cloud-storage \
