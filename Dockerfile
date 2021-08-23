@@ -9,7 +9,6 @@ RUN mkdir -p /mlflow/ \
     mlflow==$MLFLOW_VERSION \
     boto3
 
-RUN mkdir -p /mlflow/store
 RUN mkdir -p /mlflow/mlflow-artifacts
 RUN chmod 777 -R /mlflow/
 
