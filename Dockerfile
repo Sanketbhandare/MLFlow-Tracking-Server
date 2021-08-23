@@ -7,7 +7,7 @@ ARG MLFLOW_VERSION=1.19.0
 RUN mkdir -p /mlflow/ \
   && pip install \
     mlflow==$MLFLOW_VERSION \
-    boto3 \
+    boto3
 
 RUN mkdir -p /mlflow/store
 RUN mkdir -p /mlflow/mlflow-artifacts
